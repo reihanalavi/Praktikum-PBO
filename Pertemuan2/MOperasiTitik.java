@@ -12,12 +12,11 @@ public class MOperasiTitik {
         Titik t1 = new Titik(4.0, 4.0);
         System.out.println("Titik 1 : (" + t1.getAbsis() + ", " + t1.getOrdinat() + ")");
 
-        op.refleksiX(t1);
-        System.out.println("Titik 1 setelah di refleksi Sumbu X : ("+ t1.getAbsis() + ", " + t1.getOrdinat() + ")");
+        Titik rX = op.refleksiX(t1);
+        System.out.println("Titik 1 setelah di refleksi Sumbu X : ("+ rX.getAbsis() + ", " + rX.getOrdinat() + ")");
 
-        t1 = new Titik(4.0, 4.0);
-        op.refleksiY(t1);
-        System.out.println("Titik 1 setelah di refleksi Sumbu Y : ("+ t1.getAbsis() + ", " + t1.getOrdinat() + ")");
+        Titik rY = op.refleksiY(t1);
+        System.out.println("Titik 1 setelah di refleksi Sumbu Y : ("+ rY.getAbsis() + ", " + rY.getOrdinat() + ")");
 
     }
 }

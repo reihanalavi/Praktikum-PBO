@@ -6,8 +6,6 @@
 package Pertemuan2;
 
 public class OperasiTitik {
-    public OperasiTitik() { }
-
     private void refleksiSumbuX(Titik titik) {
         Double ordinat = titik.getOrdinat();
         titik.setOrdinat(ordinat * -1);
@@ -19,11 +17,21 @@ public class OperasiTitik {
         titik.setAbsis(absis * -1);
     }
 
-    public void refleksiX(Titik titik) {
-        refleksiSumbuX(titik);
+    public Titik refleksiX(Titik titik) {
+        Titik titikResult = new Titik();
+        titikResult.setAbsis(titik.getAbsis());
+        titikResult.setOrdinat(titik.getOrdinat());
+        refleksiSumbuX(titikResult);
+
+        return titikResult;
     }
 
-    public void refleksiY(Titik titik) {
-        refleksiSumbuY(titik);
+    public Titik refleksiY(Titik titik) {
+        Titik titikResult = new Titik();
+        titikResult.setAbsis(titik.getAbsis());
+        titikResult.setOrdinat(titik.getOrdinat());
+        refleksiSumbuY(titikResult);
+
+        return titikResult;
     }
 }
