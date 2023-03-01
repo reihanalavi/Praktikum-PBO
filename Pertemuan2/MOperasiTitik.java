@@ -8,17 +8,16 @@ package Pertemuan2;
 public class MOperasiTitik {
     public static void main(String[] args) {
         OperasiTitik op = new OperasiTitik();
+
         Titik t1 = new Titik(4.0, 4.0);
+        System.out.println("Titik 1 : (" + t1.getAbsis() + ", " + t1.getOrdinat() + ")");
 
-        Titik t1RefleksiX = new Titik(0.0, 0.0);
-        Titik t1RefleksiY = new Titik(0.0, 0.0);
+        op.refleksiX(t1);
+        System.out.println("Titik 1 setelah di refleksi Sumbu X : ("+ t1.getAbsis() + ", " + t1.getOrdinat() + ")");
 
-        t1RefleksiX = op.refleksiX(t1);
-        t1RefleksiY = op.refleksiY(t1);
-
-        System.out.println("Titik : (" + t1.getAbsis() + ", " + t1.getOrdinat() + ")");
-        System.out.println("Titik setelah di refleksi Sumbu X : ("+ t1RefleksiX.getAbsis() + ", " + t1RefleksiX.getOrdinat() + ")");
-        System.out.println("Titik setelah di refleksi Sumbu Y : ("+ t1RefleksiY.getAbsis() + ", " + t1RefleksiY.getOrdinat() + ")");
+        t1 = new Titik(4.0, 4.0);
+        op.refleksiY(t1);
+        System.out.println("Titik 1 setelah di refleksi Sumbu Y : ("+ t1.getAbsis() + ", " + t1.getOrdinat() + ")");
 
     }
 }

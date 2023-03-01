@@ -8,25 +8,22 @@ package Pertemuan2;
 public class OperasiTitik {
     public OperasiTitik() { }
 
-    private Titik refleksiSumbuX(Titik titik) {
-        Titik titikResult = new Titik();
-        titikResult.setAbsis(titik.getAbsis());
-        titikResult.setOrdinat(titik.getOrdinat() * -1);
-        return titikResult;
+    private void refleksiSumbuX(Titik titik) {
+        Double ordinat = titik.getOrdinat();
+        titik.setOrdinat(ordinat * -1);
+        
     }
 
-    private Titik refleksiSumbuY(Titik titik) {
-        Titik titikResult = new Titik();
-        titikResult.setAbsis(titik.getAbsis() * -1);
-        titikResult.setOrdinat(titik.getOrdinat());
-        return titikResult;
+    private void refleksiSumbuY(Titik titik) {
+        Double absis = titik.getAbsis();
+        titik.setAbsis(absis * -1);
     }
 
-    public Titik refleksiX(Titik titik) {
-        return refleksiSumbuX(titik);
+    public void refleksiX(Titik titik) {
+        refleksiSumbuX(titik);
     }
 
-    public Titik refleksiY(Titik titik) {
-        return refleksiSumbuY(titik);
+    public void refleksiY(Titik titik) {
+        refleksiSumbuY(titik);
     }
 }
