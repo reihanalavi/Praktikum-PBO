@@ -13,7 +13,7 @@ public class MKubus {
         Kubus kubus;
         BujurSangkar bujurSangkar;
 
-        bujurSangkar = new BujurSangkar(4.5, 4);
+        bujurSangkar = new BujurSangkar(4, 4);
         kubus = new Kubus(bujurSangkar);
 
         System.out.println("Volume dari Kubus adalah : " + kubus.hitungVolume());
